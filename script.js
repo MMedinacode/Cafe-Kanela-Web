@@ -40,34 +40,35 @@ document.getElementById('navToggle').addEventListener('click', () => {
 const CATEGORIES = [
   { id: 'cafe', label: 'Café' },
   { id: 'reposteria', label: 'Repostería' },
-  { id: 'emporio', label: 'Emporio' },
+  { id: 'te', label: 'Té' },
 ];
 
 const MENU = {
   cafe: {
     items: [
       { n: 'Café de grano', d: 'Espresso, cortado o americano — café de especialidad en grano.' },
+      { n: 'Café con canela', d: 'Su bebida de sello, con un toque de canela espolvoreada.' },
       { n: 'Mocaccino', d: 'Café, chocolate y leche texturizada.' },
-    ]
+    ],
+    note: 'Categoría real, tal como aparece en la pizarra de menú del local.'
   },
   reposteria: {
-    photo: 'fotos/bread.jpg',
+    photo: 'fotos/pizarra-menu.jpg',
     items: [
+      { n: 'Medialuna', d: 'Recién horneada, ideal para el desayuno.' },
+      { n: 'Trozo de Torta', d: 'Selección de la vitrina — incluye red velvet y cheesecake de berries.' },
+      { n: 'Muffins', d: 'Horneados en casa.' },
+      { n: 'Donuts', d: 'De la vitrina, con distintas coberturas.' },
       { n: 'Pie de Limón', d: 'El plato más destacado del local según Google Maps.' },
-      { n: 'Kuchen de manzana', d: 'Receta casera, ideal para acompañar el café de la tarde.' },
-      { n: 'Cheesecake', d: 'De la vitrina, cambia según la semana.' },
-      { n: 'Torta amor', d: 'Torta de chocolate — "hecho con amor", como dice su lema.' },
-      { n: 'Donuts', d: 'Horneados en casa.' },
     ],
-    note: 'No hay una carta con precios publicada — productos reales mencionados en reseñas e Instagram, precios a confirmar con el local.'
+    note: 'Categorías reales, tal como aparecen en la pizarra de menú del local (foto real arriba). Precios a confirmar directamente.'
   },
-  emporio: {
-    photo: 'fotos/chocolates.jpg',
+  te: {
     items: [
-      { n: 'Caluga de frambuesa', d: 'Del "Emporio" de chocolates del local.' },
-      { n: 'Chocolatería surtida', d: 'Selección de chocolates del emporio propio de Kanela.' },
+      { n: 'Té', d: 'Selección de té e infusiones.' },
+      { n: 'Promociones', d: 'Combos de desayuno y té de la tarde — mencionados en reseñas de clientes.' },
     ],
-    note: 'El "Emporio" es una de las historias destacadas de su Instagram — venta de chocolates aparte de la cafetería.'
+    note: 'El "Emporio" de chocolates es otra línea propia del local (destacado de su Instagram), aparte de la carta de la cafetería.'
   }
 };
 
@@ -202,8 +203,9 @@ function getSantiagoNow() {
 
 const { day, hour } = getSantiagoNow();
 let range;
-if (day >= 1 && day <= 5) range = [6.5, 20];
-else range = [8, 14];
+if (day >= 1 && day <= 5) range = [6.5, 20];       // Lunes a viernes
+else if (day === 6) range = [8, 13.5];              // Sábado
+else range = [8.5, 13.5];                            // Domingo
 
 const isOpen = hour >= range[0] && hour < range[1];
 document.getElementById('statusDot').classList.toggle('closed', !isOpen);
