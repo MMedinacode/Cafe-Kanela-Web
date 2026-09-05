@@ -16,18 +16,25 @@ const revealObserver = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); revealObserver.unobserve(e.target); } });
 }, { threshold: 0.15 });
 
+function armReveal(el) {
+  revealObserver.observe(el);
+  // Red de seguridad: si el IntersectionObserver no dispara a tiempo (por el motivo que
+  // sea), el contenido no puede quedar invisible para siempre — se fuerza visible.
+  setTimeout(() => el.classList.add('in'), 1200);
+}
+
 function goToTab(tabId) {
   panels.forEach(p => p.classList.toggle('active', p.dataset.tabPanel === tabId));
   document.querySelectorAll('.nav-link').forEach(l => l.classList.toggle('active', l.dataset.tab === tabId));
   window.scrollTo({ top: 0, behavior: 'smooth' });
   document.getElementById('main-nav').classList.remove('open');
   const activePanel = document.querySelector('.tab-panel.active');
-  if (activePanel) activePanel.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  if (activePanel) activePanel.querySelectorAll('.reveal').forEach(armReveal);
 }
 document.querySelectorAll('[data-tab]').forEach(el => {
   el.addEventListener('click', (e) => { e.preventDefault(); goToTab(el.dataset.tab); });
 });
-document.querySelectorAll('.tab-panel.active .reveal').forEach(el => revealObserver.observe(el));
+document.querySelectorAll('.tab-panel.active .reveal').forEach(armReveal);
 
 document.getElementById('navToggle').addEventListener('click', () => {
   document.getElementById('main-nav').classList.toggle('open');
