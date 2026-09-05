@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Café Kanela · Cafetería y pastelería en Santiago Centro</title>
+<!--
+  PROSPECTO EN FRÍO — datos reales verificados en Google Maps e Instagram el 05-09-2026:
+  - Café Kanela, Av. Almte. Blanco Encalada 1723, Local 1, Santiago Centro.
+  - Google Maps: 4.7★ / 706 opiniones. Place ID real: 0x9662c505673801e5:0xff0abf9998f81b57
+    (obtenido vía Compartir → Incorporar un mapa).
+  - WhatsApp REAL confirmado: el bio de su propio Instagram (@cafekanela) tiene el link
+    wa.me/56963377702 — coincide con el teléfono publicado en Maps (9 6337 7702).
+  - Instagram real: @cafekanela (1608 seguidores). Bio: "Hecho con AMOR✨", símbolo 🕉,
+    con historias destacadas "Emporio🍫", "Tortas🍰", "Horario🕰️" y "Espacio lanero"
+    (rincón de tejido/lana dentro del local — diferenciador real y poco común).
+  - HORARIO: hay una diferencia entre Google Maps (Lun-Vie 6:30-15:00, Sáb 8-13:30,
+    Dom 8:30-13:30) y el bio de Instagram + el resumen de IA de Google (Lun-Vie 6:30-20:00,
+    Sáb y Dom 8:00-14:00). Se usó la versión de Instagram/resumen de IA por ser más
+    reciente y coincidir entre sí — CONFIRMAR con el local antes de la propuesta final.
+  - No se encontró TikTok confirmado para este local específico (hay varios negocios
+    llamados "cafe kanela" en otros países que no son este).
+  - No tienen presencia en Rappi/Uber Eats/PedidosYa (confirmado por búsqueda).
+  - Reseñas reales (2, de Google Maps, con nombre del autor): Nathaly Donoso y
+    Francisco Pérez Muñiz.
+  - Menú: no hay una carta con precios publicada en ningún canal. Los productos abajo
+    son reales (mencionados en reseñas, Instagram o como "plato destacado" en Maps:
+    Pie de Limón, Kuchen de manzana, Mocaccino, Torta amor, Cheesecake, Donuts, Caluga de
+    frambuesas) pero los precios se muestran como "Consultar" — nunca inventados.
+  - FOTOS: este es un contacto en frío, todavía no tenemos fotos reales entregadas por el
+    dueño. Se usan fotos de stock (Unsplash, verificadas) marcadas explícitamente como
+    temporales en este comentario y en el pie de cada sección — deben reemplazarse por
+    fotos reales del local en cuanto el negocio las entregue. Nunca se usó una foto real
+    de otra cafetería del portafolio.
+  - Identidad visual: paleta y tipografía definidas con la skill ui-ux-pro-max, inspirada
+    en el interior real (paredes turquesa, muebles blancos, cojines morados) visible en las
+    fotos públicas de Google Maps, pero sin reutilizar esas fotos directamente.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500;1,9..144,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="loadScreen">
+  <svg viewBox="0 0 60 60" width="52" height="52" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M30 8c8 0 14 6 14 13 0 5-3 8-7 8s-6-2-6-5 2-4 4-4 3 1 3 3" stroke="#F2B79A" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="30" cy="30" r="24" stroke="#2C8F86" stroke-width="2.5"/>
+  </svg>
+</div>
+
+<header id="site-header">
+  <div class="nav-bar">
+    <div class="nav-brand display">Café Kanela</div>
+    <nav class="nav-links" id="main-nav">
+      <button class="nav-link active" data-tab="inicio">Inicio</button>
+      <button class="nav-link" data-tab="nosotros">Nosotros</button>
+      <button class="nav-link" data-tab="carta">Carta</button>
+      <button class="nav-link" data-tab="resenas">Reseñas</button>
+      <button class="nav-link" data-tab="visitanos">Visítanos</button>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+  <!-- ===================== INICIO ===================== -->
+  <section class="tab-panel active" data-tab-panel="inicio">
+    <div class="hero">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="hero-eyebrow">Santiago Centro · Hecho con amor desde temprano</p>
+          <h1>Café, tortas<br>y un poco de lana.</h1>
+          <p class="lead">Repostería y café de especialidad en el corazón de Santiago, con un rincón de tejido propio y horario desde las 6:30 de la mañana.</p>
+          <div class="hero-ctas">
+            <button class="btn btn-primary" data-tab="carta">Ver la carta</button>
+            <a class="btn btn-outline-light" href="https://wa.me/56963377702" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <img src="fotos/hero.jpg" alt="Café con arte latte entre plantas (foto referencial, no del local)">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== NOSOTROS ===================== -->
+  <section class="tab-panel" data-tab-panel="nosotros">
+    <div class="section-inner">
+      <p class="eyebrow">Quiénes somos</p>
+      <div class="about-grid reveal">
+        <div class="about-copy">
+          <h2 class="section-title">Repostería propia,<br>hecha con amor.</h2>
+          <p>Café Kanela es una cafetería y pastelería en pleno Santiago Centro, con más de 700 reseñas en Google y una reputación construida a pulso: café de grano, tortas y kuchen horneados en casa, y opciones veganas y sin gluten para que nadie se quede sin probar algo rico.</p>
+          <p>Abren desde muy temprano entre semana — ideal para el desayuno antes del trabajo — y los fines de semana se toman con calma, con horario más corto.</p>
+          <div class="tag-row">
+            <span class="tag">🌱 Opciones veganas y sin gluten</span>
+            <span class="tag">🥐 Repostería propia</span>
+            <span class="tag">🌅 Abren desde las 6:30 am</span>
+          </div>
+          <div class="stat-row">
+            <div class="stat"><div class="num">4.7</div><div class="lbl">Google Reviews</div></div>
+            <div class="stat"><div class="num">706</div><div class="lbl">Opiniones</div></div>
+            <div class="stat"><div class="num">$5–10k</div><div class="lbl">Por persona aprox.</div></div>
+          </div>
+        </div>
+        <div class="about-photo">
+          <img src="fotos/dough.jpg" alt="Manos amasando masa artesanal (foto referencial, no del local)">
+        </div>
+      </div>
+
+      <div class="feature-band reveal">
+        <div class="about-photo">
+          <img src="fotos/chocolates.jpg" alt="Chocolates artesanales (foto referencial, no del local)">
+        </div>
+        <div>
+          <p class="eyebrow">Un detalle poco común</p>
+          <h2 class="section-title" style="margin-bottom:20px;">El espacio lanero.</h2>
+          <p style="line-height:1.8; color:var(--ink-soft); font-size:1.02rem;">Además de café y pastelería, Kanela tiene su propio "Emporio" de chocolates y un rincón dedicado al tejido — un "espacio lanero" que lo distingue de cualquier otra cafetería del barrio. Un lugar para quedarse un rato, no solo para el café rápido.</p>
+        </div>
+      </div>
+      <p class="ph-note reveal" style="margin-top:24px;">* Fotos de esta sección son referenciales (de stock), a la espera de fotos reales del local.</p>
+    </div>
+  </section>
+
+  <!-- ===================== CARTA ===================== -->
+  <section class="tab-panel" data-tab-panel="carta">
+    <div class="section-inner">
+      <p class="eyebrow">La carta</p>
+      <h2 class="section-title reveal" style="margin-bottom:14px;">Dulce y con calma.</h2>
+      <p class="menu-note reveal">Café Kanela no tiene una carta con precios publicada en ningún canal — los productos de abajo son reales (mencionados en sus reseñas, redes sociales y ficha de Google), pero los precios se muestran como "Consultar" hasta confirmarlos directamente con el local.</p>
+      <div id="menuTabs" class="menu-tabs reveal"></div>
+      <div id="menuPanels"></div>
+    </div>
+  </section>
+
+  <!-- ===================== RESEÑAS ===================== -->
+  <section class="tab-panel" data-tab-panel="resenas" style="background:var(--teal-deep); color:var(--cream);">
+    <div class="section-inner">
+      <p class="eyebrow" style="justify-content:center;">Lo que dicen</p>
+      <div class="review-summary reveal">
+        <div class="stars">★★★★★</div>
+        <p class="big display">4.7</p>
+        <p style="opacity:.75; text-transform:uppercase; font-size:.78rem; letter-spacing:.08em; font-weight:600;">706 opiniones en Google Maps</p>
+      </div>
+      <div class="reviews-grid reveal">
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>"Me encanta!! Rico sabor! Excelente atención!! Sus desayunos son una maravilla."</p>
+          <div class="review-name">Nathaly Donoso</div>
+          <div class="review-when">Hace 5 meses</div>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>"Buen café en grano! Rico ambiente, grata atención y tienen una amplia variedad. He venido un par de veces y creo que es el mejor café del barrio. Atienden desde tempranito y hay varios lugares para estacionar cerca."</p>
+          <div class="review-name">Francisco Pérez Muñiz</div>
+          <div class="review-when">Hace 1 año</div>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:52px;" class="reveal">
+        <a class="btn btn-outline-light" href="https://search.google.com/local/writereview?placeid=0x9662c505673801e5:0xff0abf9998f81b57" target="_blank" rel="noopener">Déjanos tu reseña en Google</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== VISÍTANOS ===================== -->
+  <section class="tab-panel" data-tab-panel="visitanos">
+    <div class="section-inner">
+      <p class="eyebrow">Visítanos</p>
+      <h2 class="section-title" style="margin-bottom:44px;">Blanco Encalada 1723.</h2>
+      <div class="visit-grid">
+        <div class="visit-info">
+          <div class="visit-label">Dirección</div>
+          <p>Av. Almte. Blanco Encalada 1723, Local 1<br>Santiago, Región Metropolitana</p>
+
+          <div class="visit-label">Horario</div>
+          <div class="status-pill"><span class="status-dot" id="statusDot"></span><span id="statusText">Cargando…</span></div>
+          <p style="font-size:.92rem; color:var(--ink-soft); margin-top:10px;">Lunes a viernes 6:30–20:00<br>Sábado y domingo 8:00–14:00</p>
+          <p class="ph-note">* Horario según Instagram y resumen de Google — Maps muestra un cierre más temprano entre semana; confirmar con el local.</p>
+
+          <div class="tag-row">
+            <span class="tag">☕ Consumo en el lugar</span>
+            <span class="tag">🥐 Para llevar</span>
+          </div>
+
+          <div class="contact-grid">
+            <a class="contact-box" href="https://wa.me/56963377702" target="_blank" rel="noopener">
+              <div class="lbl">WhatsApp</div>
+              <div class="val">+56 9 6337 7702</div>
+            </a>
+            <a class="contact-box" href="https://instagram.com/cafekanela" target="_blank" rel="noopener">
+              <div class="lbl">Instagram</div>
+              <div class="val">@cafekanela</div>
+            </a>
+            <a class="contact-box" href="https://www.google.com/maps/dir/?api=1&destination=Cafe+Kanela&destination_place_id=0x9662c505673801e5:0xff0abf9998f81b57" target="_blank" rel="noopener">
+              <div class="lbl">Google Maps</div>
+              <div class="val">Cómo llegar</div>
+            </a>
+            <a class="contact-box" href="https://waze.com/ul?ll=-33.4561212,-70.6580944&navigate=yes" target="_blank" rel="noopener">
+              <div class="lbl">Waze</div>
+              <div class="val">Ir con Waze</div>
+            </a>
+          </div>
+        </div>
+        <div class="map-wrap">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3328.7384090251444!2d-70.6580944!3d-33.4561212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c505673801e5%3A0xff0abf9998f81b57!2sCaf%C3%A9%20Kanela!5e0!3m2!1ses-419!2scl!4v1788638171008!5m2!1ses-419!2scl" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="brand display">Café Kanela</div>
+  <p>Av. Almte. Blanco Encalada 1723, Santiago · <a href="https://instagram.com/cafekanela" target="_blank" rel="noopener">@cafekanela</a></p>
+  <p style="opacity:.6; font-size:.82rem;">Sitio demo diseñado con cariño ✨</p>
+</footer>
+
+<a id="floatWhatsapp" class="float-widget" href="https://wa.me/56963377702" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M20 12a8 8 0 1 1-3.4-6.55M20 12l-1.2 4.4L14 15"/><path d="M8.5 9.5c.3 2.7 2.3 4.7 5 5"/></svg>
+</a>
+<a id="floatInstagram" class="float-widget" href="https://instagram.com/cafekanela" target="_blank" rel="noopener" aria-label="Instagram">
+  <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+</a>
+<button id="cartFab" class="float-widget" aria-label="Ver pedido">
+  <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+</button>
+
+<div id="cartOverlay" class="overlay"></div>
+<div id="cartPanel" class="cart-panel">
+  <div class="cart-header">
+    <h3 class="display">Tu pedido</h3>
+    <button class="cart-close" id="cartCloseBtn">Cerrar ✕</button>
+  </div>
+  <div id="cartLines" class="cart-lines"></div>
+  <div class="cart-footer">
+    <div class="cart-total-row"><span>Total estimado</span><span id="cartTotal">$0</span></div>
+    <a id="checkoutBtn" class="btn btn-primary" style="width:100%; justify-content:center;" href="#" target="_blank" rel="noopener">Enviar pedido por WhatsApp</a>
+  </div>
+</div>
+
+<div id="modalOverlay" class="overlay"></div>
+<div id="modalBox" class="modal-box">
+  <button class="modal-close" id="modalCloseBtn">✕</button>
+  <div class="modal-cat" id="modalCategory"></div>
+  <h3 id="modalName"></h3>
+  <p id="modalDesc"></p>
+  <div class="modal-footer">
+    <span class="modal-price" id="modalPrice"></span>
+    <button class="btn btn-primary" id="modalAddBtn">Agregar</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
